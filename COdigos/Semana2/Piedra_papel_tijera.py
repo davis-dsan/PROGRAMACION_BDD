@@ -1,23 +1,22 @@
-player = input("Piedra, Papel o Tijera? :")
-computer = input("Piedra, Papel o Tijera? :")
+player = input("piedra, papel o tijera? :").lower()
+
+computer = "Piedra".lower()
 
 #Logica del juego
 if player == computer:
         print("Empate")
-elif player == "Piedra":
-        if computer == "Papel":
+elif player == "piedra":
+        if computer == "papel":
             print("Perdiste! ", computer, " > ", player)
         else:
             print("Ganaste !", player, " < ", computer)
-elif player == "Papel":
-        if computer == "Tijera":
+elif player == "papel":
+        if computer == "tijera":
             print("Perdiste! ", computer, " > ", player)
         else:
             print("Ganaste! ", player, " < ", computer)
-elif player == "Tijera":
-        if computer == "Piedra":
+elif player == "tijera":
+        if computer == "piedra":
             print("Perdiste! ", computer, " > ", player)
         else:
             print("Ganaste! ", player, " < ", computer)
-else:
-        print("Opción no valida, Intentar escribir las opciones como se las ve.")
