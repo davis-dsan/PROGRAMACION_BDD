@@ -1,22 +1,27 @@
+import random
+
 player = input("piedra, papel o tijera? :").lower()
 
-computer = "Piedra".lower()
+my_random = ["Piedra", "papel", "tijera"]
+
+my_random = random.choice(my_random)
+print(my_random)
 
 #Logica del juego
-if player == computer:
+if player == my_random:
         print("Empate")
 elif player == "piedra":
-        if computer == "papel":
-            print("Perdiste! ", computer, " > ", player)
+        if my_random == "papel":
+            print("Perdiste! ", my_random, " > ", player)
         else:
-            print("Ganaste !", player, " < ", computer)
+            print("Ganaste !", player, " < ", my_random)
 elif player == "papel":
-        if computer == "tijera":
-            print("Perdiste! ", computer, " > ", player)
+        if my_random == "tijera":
+            print("Perdiste! ", my_random, " > ", player)
         else:
-            print("Ganaste! ", player, " < ", computer)
+            print("Ganaste! ", player, " < ", my_random)
 elif player == "tijera":
-        if computer == "piedra":
-            print("Perdiste! ", computer, " > ", player)
+        if my_random == "piedra":
+            print("Perdiste! ", my_random, " > ", player)
         else:
-            print("Ganaste! ", player, " < ", computer)
+            print("Ganaste! ", player, " < ", my_random)
