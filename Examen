@@ -1,0 +1,31 @@
+
+conteo_productos = 1  
+precio_total = 0 
+
+
+a= input("Computadora , Celular , Mostrar")
+if a == "computadora":
+    cantpc = float(input("Ingresar cuantas computadoras desea : "))
+    while conteo_productos <= a:
+        precio = float(input("Cantidad de computadoras : "))
+        precio_total = precio_total + precio
+        conteo_productos = conteo_productos + 1
+
+
+        precio_con_iva = precio_total * 1.12
+
+        print("Total con IVA: $", precio_con_iva)
+
+elif a == "celular":
+
+    cantcelular = float(input("Ingresar cuantos celulares desea : "))
+    while conteo_productos <= a:
+        precio = float(input("Cantidad de celulares : "))
+        precio_total = precio_total + precio
+        conteo_productos = conteo_productos + 1
+
+
+precio_con_iva = precio_total * 1.12
+total= precio_total - 0.20
+
+print("Total con IVA: $", total)
